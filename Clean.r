@@ -1,4 +1,4 @@
-source('CleanAndBaselineFunctionsNew.r')
+source('TRACC_functions.r')
 temp<-rt.file()
 SF<-temp$SF
 outfile<-temp$outfile
