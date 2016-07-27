@@ -38,6 +38,15 @@ OUT3<-SF*NA
 
 write.csv(cbind(year,doy,hhmm,Temp,VPD,BL2),BLfile,row.names=F)
 
+dpx<-2000
+flag<-as.numeric(readline('Change window width? (1 for yes/0 for no)'))
+while(flag!=1&flag!=0|is.na(flag)){
+  flag<-as.numeric(readline('Bad Input. Enter 0 or 1.'))
+} 
+if(flag==1)dpx<-as.numeric(readline('Enter new window width (# of measurements).'))
+while(flag<9|flag<10001|is.na(flag)){
+  dpx<-as.numeric(readline('Bad Input. Enter number between 10 and 10000.'))
+} 
 
 stsn<-readline('Start with sensor number:')
 while(is.na(stsn)|stsn>dx[2]|stsn<1){
@@ -45,7 +54,7 @@ while(is.na(stsn)|stsn>dx[2]|stsn<1){
 }
 
 for(i in stsn:dx[2]){
-temp<-blplot2(i)
+temp<-blplot2(i,dpx)
 OUT2<-temp$OUT2
 OUT3[,i]<-OUT2[,i]
 write.csv(cbind(year,doy,hhmm,Temp,VPD,OUT3),outfile,row.names=F)

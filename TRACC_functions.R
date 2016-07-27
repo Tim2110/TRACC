@@ -97,10 +97,10 @@ list(SF=SF)
 }
 
 ###########plot sensor for cleaning#######
-cleanplot<-function(sn){
+cleanplot<-function(sn,dpx){
 print(c('Cleaning Sensor ',sn))
 par(yaxt='s',mar=c(2,2,0,0))
-dpx<-2000 #index width of plot
+(if is.na(dpx) dpx<-2000 #index width of plot
 flag2<-0
 flag3<-flag<-1
 pmn<-1
@@ -217,12 +217,12 @@ list(BL2=BL2,BL=BL,OUT=OUT,OUT2=OUT2)
 
 
 ##################BL PLOT FUNCTION W Cleaning###########
-blplot2<-function(sn){
+blplot2<-function(sn,dn){
 if(sum(is.finite(SF[,sn])>0)){
 sn<-sn#sensor number
 wn<-1#window number
 flag<-1
-dn<-2000#window width
+if(is.na(dn)) dn<-2000#window width
 mn<-min(which(is.finite(OUT2[,sn])))
 mx<-max(which(is.finite(OUT2[,sn])))
 bk<-1
