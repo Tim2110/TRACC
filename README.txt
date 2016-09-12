@@ -18,7 +18,7 @@ source('TRACC.r') into the Console window of R.
 
 This should prompt you with the question "Clean (1) or Convert (2)?"
 
-It is suggested that you carefully clean your data before converting it.  Zero and negative values in particular my cause conversion to fail.  Erroneously high or low values will make conversion inaccurate, though it might not crash the program.
+It is suggested that you carefully clean your data before converting it.  Zero and negative values in particular may cause conversion to fail.  Erroneously high or low values will make conversion inaccurate, though it might not crash the program.
 
 Below is a brief description of Cleaning and Conversion
 
