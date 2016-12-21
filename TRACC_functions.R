@@ -100,7 +100,7 @@ list(SF=SF)
 cleanplot<-function(sn,dpx){
 print(c('Cleaning Sensor ',sn))
 par(yaxt='s',mar=c(2,2,0,0))
-if (is.na(dpx) dpx<-2000 #index width of plot
+if (is.na(dpx)) dpx<-2000 #index width of plot
 flag2<-0
 flag3<-flag<-1
 pmn<-1
