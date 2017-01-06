@@ -16,7 +16,7 @@ newpars<-readline('Use original Granier calibration? (1 for yes/0 for no)')
 while(newpars!=1&newpars!=0|is.na(newpars)){
   newpars<-as.numeric(readline('Bad Input. Enter 0 or 1.'))
 } 
-if(newpars==1){
+if(newpars==0){
   alpha1<-readline('New Alpha (original = 118.99)')
   while(is.na(alpha1)){
     alpha1<-as.numeric(readline('Bad Input. Enter a number.'))
