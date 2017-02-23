@@ -2,11 +2,11 @@
 
 ################### Version 3.0 #####################
 
-TRACC.r, CleanAndBaselineFunctionsNew.r, CleanSapfluxData.r, BaselineSapfluxData.r and datafiles should all be in same folder.
+TRACC.r, Clean.r, Convert.r, TRACC_functions.r and data files should all be in same folder.
 
 Data inputs should be comma-delimited (.csv) and have the columns: Year, DOY, HHMM, Temp, VPD, followed by columns of sap flux data.  These data should be temperature differences in C between heated and unheated probes with NA for missing values.  If the calibration of your thermocouples are linear with zero intercept (i.e. multiplied by a constant), then the voltage difference should also work, though the software has not been tested for this yet.
 
-DOY is an integer of the julian day, HHMM is the time in hours and minutes (i.e. 1230 is half-past noon), Temp is air temperature in degrees C, and VPD is vapor pressure deficit in kPa.
+DOY is an integer of the julian day, HHMM is the solar time in hours and minutes (i.e. 1330 is half-past one pm), Temp is air temperature in degrees C, and VPD is vapor pressure deficit in kPa.
 
 TRACC.r is the primary wrapper that runs the other files.
 CleanAndBaselineFunctionsNew.r is source code that is called by the other two programs; it contains steps for each process as functions.
