@@ -1,6 +1,6 @@
 ############# Thermal dissipation probe Review Assess Clean and Convert (TRACC) Software README #############
 
-################### Version 3.0 #####################
+################### Version 3.1 #####################
 
 TRACC.r, Clean.r, Convert.r, TRACC_functions.r and data files should all be in same folder.
 
