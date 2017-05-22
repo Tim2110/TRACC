@@ -175,7 +175,6 @@ while(is.na(dur)){
   dur<-as.numeric(readline('Bad Input. Enter a number.'))
 } 
 dx<-dim(SF)
-zz<-seq(1,dx[1],48)
 days<-unique(year+doy/365)
 BL<-SF*NA
 OUT2<-OUT<-BL2<-BL3<-BL
